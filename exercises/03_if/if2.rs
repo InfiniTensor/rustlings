@@ -2,8 +2,10 @@
 fn picky_eater(food: &str) -> &str {
     if food == "strawberry" {
         "Yummy!"
+    } else if food == "potato" {
+        "I guess I can eat that."
     } else {
-        1
+        "No thanks!"
     }
 }
 
@@ -19,7 +21,7 @@ mod tests {
 
     #[test]
     fn yummy_food() {
-        // This means that calling `picky_eater` with the argument "strawberry" should return "Yummy!".
+        // This means that calling `picky_eater` with the argument "food" should return "Yummy!".
         assert_eq!(picky_eater("strawberry"), "Yummy!");
     }
 
