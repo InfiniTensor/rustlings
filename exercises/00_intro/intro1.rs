@@ -6,7 +6,8 @@
 // Try adding a new `println!` and check the updated output in the terminal.
 
 fn main() {
-    println!(r#"       Welcome to...                      "#);
+    println!("Hello and");
+    println!(r#"       welcome to...                      "#);
     println!(r#"                 _   _ _                  "#);
     println!(r#"  _ __ _   _ ___| |_| (_)_ __   __ _ ___  "#);
     println!(r#" | '__| | | / __| __| | | '_ \ / _` / __| "#);
@@ -18,8 +19,13 @@ fn main() {
     println!("or logic error. The central concept behind Rustlings is to fix these errors and");
     println!("solve the exercises. Good luck!");
     println!();
-    println!("The file of this exercise is `exercises/00_intro/intro1.rs`. Have a look!");
-    println!("The current exercise path will be always shown under the progress bar.");
-    println!("You can click on the path to open the exercise file in your editor.");
-    println!("Hello.");
+    println!("The source for this exercise is in `exercises/intro/intro1.rs`. Have a look!");
+    println!(
+        "Going forward, the source of the exercises will always be in the success/failure output."
+    );
+    println!();
+    println!(
+        "If you want to use rust-analyzer, Rust's LSP implementation, make sure your editor is set"
+    );
+    println!("up, and then run `rustlings lsp` before continuing.")
 }
