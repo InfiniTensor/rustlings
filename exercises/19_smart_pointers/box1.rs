@@ -10,20 +10,22 @@
 // the next item. The last item is a value called `Nil`.
 
 // TODO: Use a `Box` in the enum definition to make the code compile.
+use std::boxed::Box;
+
 #[derive(PartialEq, Debug)]
 enum List {
-    Cons(i32, List),
+    Cons(i32, Box<List>),
     Nil,
 }
 
 // TODO: Create an empty cons list.
 fn create_empty_list() -> List {
-    todo!()
+    List::Nil
 }
 
 // TODO: Create a non-empty cons list.
 fn create_non_empty_list() -> List {
-    todo!()
+    List::Cons(42, Box::new(List::Nil))
 }
 
 fn main() {
