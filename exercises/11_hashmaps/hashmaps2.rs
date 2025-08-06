@@ -9,6 +9,7 @@
 // Mango, and Lychee).
 
 use std::collections::HashMap;
+use std::iter::FromIterator;
 
 #[derive(Hash, PartialEq, Eq, Debug)]
 enum Fruit {
