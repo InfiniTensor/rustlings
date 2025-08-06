@@ -4,7 +4,11 @@
 // not own their own data. What if their owner goes out of scope?
 
 // TODO: Fix the compiler error by updating the function signature.
-fn longest(x: &str, y: &str) -> &str {
+// The function should return a reference to the longest of the two string slices.
+// The returned reference must be valid for the lifetime of the shorter of the two
+// string slices.
+// You can use the lifetime annotation `'a` to indicate that the returned reference
+fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
     if x.len() > y.len() {
         x
     } else {

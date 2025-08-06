@@ -29,21 +29,25 @@ mod tests {
         // TODO: This test should check if the rectangle has the size that we
         // pass to its constructor.
         let rect = Rectangle::new(10, 20);
-        assert_eq!(todo!(), 10); // Check width
-        assert_eq!(todo!(), 20); // Check height
+        assert_eq!(rect.width, 10); // Check width
+        assert_eq!(rect.height, 20); // Check height
     }
 
     // TODO: This test should check if the program panics when we try to create
     // a rectangle with negative width.
     #[test]
+    #[should_panic(expected = "Rectangle width and height must be positive")]
     fn negative_width() {
-        let _rect = Rectangle::new(-10, 10);
+        Rectangle::new(-10, 10);
     }
 
     // TODO: This test should check if the program panics when we try to create
     // a rectangle with negative height.
     #[test]
+    #[should_panic(expected = "Rectangle width and height must be positive")]
     fn negative_height() {
-        let _rect = Rectangle::new(10, -10);
+        // This will panic if the rectangle creation fails.
+        // The test will pass if it panics as expected.
+        Rectangle::new(10, -10);
     }
 }
