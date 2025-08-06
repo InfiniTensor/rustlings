@@ -9,10 +9,8 @@ fn main() {
     // Assume that you don't know the value of `my_option`.
     // In the case of `Some`, we want to print its value.
     // 安全地处理 Option
-    if let Some(val) = my_option {
-        println!("{}", val);
-    } else {
-        println!("Got None!");
+    if my_option.is_none() {
+        println!("{my_option:?}");
     }
     // if my_option.is_none() {
     //     println!("{}", my_option.unwrap());
