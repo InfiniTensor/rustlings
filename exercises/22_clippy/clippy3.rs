@@ -4,7 +4,8 @@
 #[rustfmt::skip]
 #[allow(unused_variables, unused_assignments)]
 fn main() {
-    let my_option: Option<&str> = None;
+    // let my_option: Option<&str> = None;
+    let my_option: Option<()> = None;
     // Assume that you don't know the value of `my_option`.
     // In the case of `Some`, we want to print its value.
     // 安全地处理 Option
