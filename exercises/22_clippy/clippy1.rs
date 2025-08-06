@@ -6,7 +6,7 @@
 
 fn main() {
     // TODO: Fix the Clippy lint in this line.
-    let pi = 3.14;
+    let pi = std::f32::consts::PI;  // 使用标准库的圆周率常量
     let radius: f32 = 5.0;
 
     let area = pi * radius.powi(2);
