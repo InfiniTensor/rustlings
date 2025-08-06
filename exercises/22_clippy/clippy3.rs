@@ -4,11 +4,9 @@
 #[rustfmt::skip]
 #[allow(unused_variables, unused_assignments)]
 fn main() {
-    let my_option: Option<&str> = None;
-    // Assume that you don't know the value of `my_option`.
-    // In the case of `Some`, we want to print its value.
-    if let Some(val) = my_option {
-        println!("{}", val);
+    let my_option: Option<()> = None;
+    if my_option.is_none() {
+        println!("{my_option:?}");
     }
 
     let my_arr = &[
@@ -17,8 +15,8 @@ fn main() {
     ];
     println!("My array! Here it is: {my_arr:?}");
 
-    let my_empty_vec: Vec<i32> = Vec::new();
-    println!("This Vec is empty, see? {my_empty_vec:?}");
+    
+    println!("This Vec is empty, see? {:?}",());
 
     let mut value_a = 45;
     let mut value_b = 66;
